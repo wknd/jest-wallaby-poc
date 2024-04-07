@@ -24,13 +24,15 @@ Then it runs those generated tests and verifies the numbers we pre-calculated ma
 
 By default, jest will use as many workers as you have cores (or half that, if re-running tests?).
 
-On my machine the initial setup phase will use all my CPU cores at near 100%.
+To test using those settings, comment out ```maxworkers``` in ```jest.config.ts```.
+
+On my machine it will use all my CPU cores at near 100%.
 
 It takes about 10 seconds.
 
 ## limit jest workers
 
-Edit the jest.config.ts file to limit the amount of workers jest will by adding:
+Edit the jest.config.ts file to limit the amount of workers jest will use by making sure the following line is uncommented:
 ```
 maxworkers="20%"
 
